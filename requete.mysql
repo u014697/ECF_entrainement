@@ -1,0 +1,34 @@
+CREATE TABLE UserID (
+    id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    firstName VARCHAR(50) NOT NULL,
+    birthDate DATE NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    pseudo VARCHAR(50) NOT NULL,
+    hashPass VARCHAR(50) NOT NULL,
+    hashToken VARCHAR(50) ,
+    expirationToken DATETIME ,
+    role int(11) NOT NULL
+);
+
+CREATE TABLE Crypto (
+    cryptoName STRING NOT NULL PRIMARY KEY,
+    logo VARCHAR(50) NOT NULL,
+    description TEXT NOT NULL
+);
+
+CREATE TABLE CryptoValue (
+    id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    cryptoName VARCHAR(50) NOT NULL,
+    value DECIMAL(12,4) NOT NULL,
+    date DATE NOT NULL,
+    FOREIGN KEY (cryptoName) REFERENCES Crypto(cryptoName)
+);
+
+CREATE TABLE PreferredCrypto (
+    id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    crypto VARCHAR(50) NOT NULL,
+    user INt(11) NOT NULL,
+    FOREIGN KEY (crypto) REFERENCES Crypto(cryptoName),
+    FOREIGN KEY (user) REFERENCES UserID(id) 
+);

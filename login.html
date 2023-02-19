@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="crypto.css">
+    <title>connexion</title>
+</head>
+<body>
+    <header>
+        <img class="left" src="image/logo.png" height="25px" width="25px"/>
+        Mon Appli Crypto
+    </header>
+    <main>
+        <img class="imagecenter" src="image/logo.png" height="250px" width="250px"/>
+
+        <div class="formulaire">
+            <form  action="mescrypto.html" method="post">
+                <div class="element">
+                    <label for="pseudo">Pseudo     : </label>
+                    <input  type="text" id="pseudo" name="pseudo"/>
+                </div>
+                <div class="element">
+                    <label for="password">Password :</label>
+                    <input type="password" id="password" name="password"/>
+                </div>
+                <div class="element">
+                    <button type="submit" id="connexion" name="connexion">Connexion</button>
+                </div>
+            </form>  
+        </div>
+       
+        <p class="textcenter">
+            Pas encore inscrit ?
+        </p>
+        <button  type="button" formaction="inscription.html" methode="post">s'inscrire</button>
+
+    </main>
+    <footer>
+        mentions légales .....
+    </footer>
+</body>
+</html>
